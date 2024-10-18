@@ -1,0 +1,72 @@
+﻿@model CarCreate
+@{
+}
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">New parking car</h2>
+
+
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Slot number</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="SlotNumber"/>
+                    <span asp-validation-for="SlotNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Vehicle number</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="VehicleNumber" />
+                    <span asp-validation-for="VehicleNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Owner name</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="OwnerName" />
+                    <span asp-validation-for="OwnerName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Contact number</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="ContactNumber" />
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Time out</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="TimeOut" />
+                    <span asp-validation-for="TimeOut" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Cost</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Cost" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-primary" asp-controller="Cars" asp-action="Index" role="button">Cancel</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
